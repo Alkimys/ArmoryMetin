@@ -1,0 +1,133 @@
+/**
+ *    Metin2Armory
+ *  @author Alkimys <alkimys@gmail.com>
+ *  @version 1.98 20/08/2012
+ *  @link http://mt2armory.funky-emu.net/
+ *
+ *    [style.css]
+ *  Feuille de style pou tooltip & stuff Metin2Armory.
+ *
+ *  Auteur original : Alkimys
+ *
+ **/
+
+div#tooltip {
+   position:absolute;
+   visibility:hidden;
+   z-index:100;
+   background:rgba(255, 255, 255, 0.8);
+   border:1px solid black;
+   color:black;
+   margin-left:25px;
+   padding: 4px 4px 4px 4px;
+}
+
+
+div#tooltip table tr {
+    background:rgba(0,0,0,0.8);
+}
+
+
+#inventaire {
+  background:url(../../includes-armory/img/inventaire.png) no-repeat;
+  width:155px;
+  height:187px;
+  border:0;
+  border-style:none;
+  display:block;
+  position:relative;
+}
+
+#inventaire img {
+  border: none;
+  background-color: transparent;
+}
+
+#data-heaume {
+  width:32px;
+  height:32px;
+  top:-4px;
+  margin-left:33px;
+  border:0;
+  border-style:none;
+  position: absolute;
+}
+
+#data-arme {
+  width: 32px;
+  height: 96px;
+  top: 0px;
+  left: -4px;
+  border: 0;
+  border-style: none;
+  position: absolute;
+}
+
+#data-armure {
+  width: 32px;
+  height: 64px;
+  top: 32px;
+  left: 32px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
+
+#data-bouclier {
+  width: 32px;
+  height: 32px;
+  top: 30px;
+  left: 70px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
+
+#data-bracelet {
+  width: 32px;
+  height: 32px;
+  top: 62px;
+  left: 70px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
+
+
+#data-collier {
+  width: 32px;
+  height: 32px;
+  top: 80px;
+  left: 110px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
+
+
+#data-boucle {
+  width: 32px;
+  height: 32px;
+  top: 45px;
+  left: 110px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
+
+
+#data-chaussure {
+  width: 32px;
+  height: 32px;
+  top: 140px;
+  left: 32px;
+  border: 0;
+  padding:0;
+  border-style: none;
+  position: absolute;
+}
