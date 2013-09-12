@@ -1,0 +1,8 @@
+Création #Alkimyst.
+
+Modification/Ajout Satir :
+
+-Modification du design du tooltip pour ressembler au FR
+-Ajout d'un code couleur FR (malus en rouge, bonus en bleu/vert)
+-Les joueurs ont le choix de bloquer ou non le visionnage de leur stuff
+-Les GM peuvent voir n'importe quel stuff qu'il soit bloqué ou non.
