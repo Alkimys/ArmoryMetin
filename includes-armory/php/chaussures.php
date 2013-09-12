@@ -31,7 +31,7 @@ $sql1 = mysql_query($requette1) or die(mysql_error());
 while(($data1 = mysql_fetch_array($sql1))) {
 
 
-    $name_chaussures = $data1['locale_name'];
+    $name_chaussures = htmlentities($data1['locale_name']);
     $chaulvl = $data1['limitvalue0'];
 
 
@@ -115,4 +115,15 @@ if ($chaun_bonus_7 >= '7' && $chaun_bonus_7 <= '47') {
     $chaun_bonus_6 = $itembonus[$chaun_bonus_6];
     $chaun_bonus_7 = $itembonus[$chaun_bonus_7];
 
+	if($chaubonus_1_v >= '0') { $chaucolor='color:rgba(200,255,200,1)'; } else { $chaucolor='color:#e57875'; }
+	if($chaubonus_2_v >= '0') { $chaucolor2='color:rgba(200,255,200,1)'; } else { $chaucolor2='color:#e57875'; }
+	if($chaubonus_3_v >= '0') { $chaucolor3='color:rgba(200,255,200,1)'; } else { $chaucolor3='color:#e57875'; }
+	
+	if($chaun_bonus_1_v >= '0') { $chaucolor4='color:rgba(200,255,200,1)'; } else { $chaucolor4='color:#e57875'; }
+	if($chaun_bonus_2_v >= '0') { $chaucolor5='color:rgba(200,255,200,1)'; } else { $chaucolor5='color:#e57875'; }
+	if($chaun_bonus_3_v >= '0') { $chaucolor6='color:rgba(200,255,200,1)'; } else { $chaucolor6='color:#e57875'; }
+	if($chaun_bonus_4_v >= '0') { $chaucolor7='color:rgba(200,255,200,1)'; } else { $chaucolor7='color:#e57875'; }
+	if($chaun_bonus_5_v >= '0') { $chaucolor8='color:rgba(200,255,200,1)'; } else { $chaucolor8='color:#e57875'; }
+	if($chaun_bonus_6_v >= '0') { $chaucolor9='color:rgba(200,255,200,1)'; } else { $chaucolor9='color:#e57875'; }
+	if($chaun_bonus_7_v >= '0') { $chaucolor10='color:rgba(200,255,200,1)'; } else { $chaucolor10='color:#e57875'; }
 ?>

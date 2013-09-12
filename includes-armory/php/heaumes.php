@@ -32,7 +32,7 @@ while(($data1 = mysql_fetch_array($sql1))) {
 
     $v5_h = $data1['value5'];
     $v1_h = $data1['value1'];
-    $name_heaume = $data1['locale_name'];
+    $name_heaume = htmlentities($data1['locale_name']);
     $hlvl = $data1['limitvalue0'];
 
     $hdef = $v5_h * 2 + $v1_h;
@@ -117,5 +117,17 @@ if ($hn_bonus_7 >= '7' && $hn_bonus_7 <= '47') {
 		$hn_bonus_5 = $itembonus[$hn_bonus_5];
 		$hn_bonus_6 = $itembonus[$hn_bonus_6];
 		$hn_bonus_7 = $itembonus[$hn_bonus_7];
+		
+	if($hbonus_1_v >= '0') { $hcolor='color:rgba(200,255,200,1)'; } else { $hcolor='color:#e57875'; }
+	if($hbonus_2_v >= '0') { $hcolor2='color:rgba(200,255,200,1)'; } else { $hcolor2='color:#e57875'; }
+	if($hbonus_3_v >= '0') { $hcolor3='color:rgba(200,255,200,1)'; } else { $hcolor3='color:#e57875'; }
+	
+	if($hn_bonus_1_v >= '0') { $hcolor4='color:rgba(200,255,200,1)'; } else { $hcolor4='color:#e57875'; }
+	if($hn_bonus_2_v >= '0') { $hcolor5='color:rgba(200,255,200,1)'; } else { $hcolor5='color:#e57875'; }
+	if($hn_bonus_3_v >= '0') { $hcolor6='color:rgba(200,255,200,1)'; } else { $hcolor6='color:#e57875'; }
+	if($hn_bonus_4_v >= '0') { $hcolor7='color:rgba(200,255,200,1)'; } else { $hcolor7='color:#e57875'; }
+	if($hn_bonus_5_v >= '0') { $hcolor8='color:rgba(200,255,200,1)'; } else { $hcolor8='color:#e57875'; }
+	if($hn_bonus_6_v >= '0') { $hcolor9='color:rgba(200,255,200,1)'; } else { $hcolor9='color:#e57875'; }
+	if($hn_bonus_7_v >= '0') { $hcolor10='color:rgba(200,255,200,1)'; } else { $hcolor10='color:#e57875'; }
 
 ?>

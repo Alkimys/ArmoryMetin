@@ -1,8 +1,8 @@
 <p>
     <h2>Rechercher un joueur</h2>
     <form action="index.php?p=armory_search" method="post">
-        <label for="perso">Trouver un joueur :</label><br />
-        <input type="text" size="30" name="perso" />
+        <label for="perso">Trouver un joueur :</label><br/><br/>
+        <input class="thell" type="text" size="30" name="perso" />
         <br /><br />
         <center><input type="submit" class="button" value="Trouver" /></center>
     </form>
@@ -28,9 +28,9 @@ if(!empty($_POST['perso']) or !empty($_GET['n']))  //Si et seulement si on a une
     //On donne le Nombre total de joueurs
     $total = $donnees['nb_perso'];
     //On donne le Rang à partir du quel on affiche le classement
-    if(isset($_GET['r']) and $_GET['r']>0){$rang=$_GET['r'];} else {$rang=0;}
+    if(isset($_GET['r']) and $_GET['r']>0 and is_numeric($_GET['r']) and $_GET['r'] < 1000){$rang=$_GET['r'];} else {$rang=0;}
     //On donne le Nombre de joueurs à afficher dans le classement
-    $nb_persos_page = 2;
+    $nb_persos_page = 5;
     //On donne la variable pour la Page suivante
     $next_rang=$rang+$nb_persos_page;
     //On donne la variable pour la Page précédente
@@ -41,11 +41,12 @@ if(!empty($_POST['perso']) or !empty($_GET['n']))  //Si et seulement si on a une
     $sql2 = mysql_query($requette2) or die('Erreur SQL !<br />'.$requette2.'<br />'.mysql_error()); 
 echo '
 <table align="center">
-  <tr>
+  <tr align="center">
     <th>Rang</th>
     <th>Pseudo</th>
     <th>Level</th>
     <th>Acc&egrave;s Page Perso</th>
+	<th>Autorisation de voir le stuff</th>
   </tr>';
 
     while(($data = mysql_fetch_array($sql2))) //Tant qu'il y a des lignes dans la requête, dans la limite du nombre total de joueur et de celui par page.
@@ -53,13 +54,19 @@ echo '
             $rang++;//On incrémente le nombre de rang
             $name = $data['name']; //On demande le nom
             $level = $data['level']; //On demande le niveau
+			if ($data['enabled_armory']==0) {
+				$autorisation="Non";
+			} else {
+				$autorisation="Oui";
+			}
     //On affiche la ligne du tableau
     echo "
-          <tr>
+          <tr align='center'>
             <td>$rang</td>
             <td>$name</td>
             <td>$level</td>
             <td><a href='index.php?p=armory&name=$name'>> ></a></td>
+			<td>$autorisation</td>
           </tr>
     ";
 

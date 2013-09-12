@@ -15,21 +15,27 @@ div#tooltip {
    position:absolute;
    visibility:hidden;
    z-index:100;
-   background:rgba(255, 255, 255, 0.8);
-   border:1px solid black;
-   color:black;
+	background:rgba(0,0,0,0.5);
+    border: white;
+	border-style: solid;
+	border-width: 15px 12px 16px 18px;
+	-moz-border-image: url(border2.png) 15 12 16 18 repeat;
+	-webkit-border-image: url(border2.png) 15 12 16 18 repeat;
+	-o-border-image: url(border2.png) 15 12 16 18 repeat;
+	border-image: url(border2.png) 15 12 16 18 repeat;
    margin-left:25px;
    padding: 4px 4px 4px 4px;
+   color:#A78C7A;
 }
 
 
 div#tooltip table tr {
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.1);
 }
 
 
 #inventaire {
-  background:url(../../includes-armory/img/inventaire.png) no-repeat;
+  background:url(../../include-armory/img/inventaire.png) no-repeat;
   width:155px;
   height:187px;
   border:0;
@@ -46,8 +52,8 @@ div#tooltip table tr {
 #data-heaume {
   width:32px;
   height:32px;
-  top:-4px;
-  margin-left:33px;
+  top:5px;
+  left:41px;
   border:0;
   border-style:none;
   position: absolute;
@@ -56,8 +62,8 @@ div#tooltip table tr {
 #data-arme {
   width: 32px;
   height: 96px;
-  top: 0px;
-  left: -4px;
+  top: 5px;
+  left: 4px;
   border: 0;
   border-style: none;
   position: absolute;
@@ -66,8 +72,8 @@ div#tooltip table tr {
 #data-armure {
   width: 32px;
   height: 64px;
-  top: 32px;
-  left: 32px;
+  top: 40px;
+  left: 40px;
   border: 0;
   padding:0;
   border-style: none;
@@ -77,8 +83,8 @@ div#tooltip table tr {
 #data-bouclier {
   width: 32px;
   height: 32px;
-  top: 30px;
-  left: 70px;
+  top: 37px;
+  left: 78px;
   border: 0;
   padding:0;
   border-style: none;
@@ -88,8 +94,8 @@ div#tooltip table tr {
 #data-bracelet {
   width: 32px;
   height: 32px;
-  top: 62px;
-  left: 70px;
+  top: 70px;
+  left: 78px;
   border: 0;
   padding:0;
   border-style: none;
@@ -100,8 +106,8 @@ div#tooltip table tr {
 #data-collier {
   width: 32px;
   height: 32px;
-  top: 80px;
-  left: 110px;
+  top: 88px;
+  left: 117px;
   border: 0;
   padding:0;
   border-style: none;
@@ -112,8 +118,8 @@ div#tooltip table tr {
 #data-boucle {
   width: 32px;
   height: 32px;
-  top: 45px;
-  left: 110px;
+  top: 54px;
+  left: 117px;
   border: 0;
   padding:0;
   border-style: none;
@@ -124,8 +130,8 @@ div#tooltip table tr {
 #data-chaussure {
   width: 32px;
   height: 32px;
-  top: 140px;
-  left: 32px;
+  top: 148px;
+  left: 40px;
   border: 0;
   padding:0;
   border-style: none;

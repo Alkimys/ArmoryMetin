@@ -33,7 +33,7 @@ while(($data1 = mysql_fetch_array($sql1))) {
     $v1 = $data1['value1'];
     $v5 = $data1['value5'];
     $bbdef = $v5 *2 + $v1;
-    $name_bouclier = $data1['locale_name'];
+    $name_bouclier = htmlentities($data1['locale_name']);
     $bblvl = $data1['limitvalue0'];
 
 
@@ -116,5 +116,17 @@ if ($bbn_bonus_7 >= '7' && $bbn_bonus_7 <= '47') {
     $bbn_bonus_5 = $itembonus[$bbn_bonus_5];
     $bbn_bonus_6 = $itembonus[$bbn_bonus_6];
     $bbn_bonus_7 = $itembonus[$bbn_bonus_7];
+	
+	if($bbbonus_1_v >= '0') { $bbcolor='color:rgba(200,255,200,1)'; } else { $bbcolor='color:#e57875'; }
+	if($bbbonus_2_v >= '0') { $bbcolor2='color:rgba(200,255,200,1)'; } else { $bbcolor2='color:#e57875'; }
+	if($bbbonus_3_v >= '0') { $bbcolor3='color:rgba(200,255,200,1)'; } else { $bbcolor3='color:#e57875'; }
+	
+	if($bbn_bonus_1_v >= '0') { $bbcolor4='color:rgba(200,255,200,1)'; } else { $bbcolor4='color:#e57875'; }
+	if($bbn_bonus_2_v >= '0') { $bbcolor5='color:rgba(200,255,200,1)'; } else { $bbcolor5='color:#e57875'; }
+	if($bbn_bonus_3_v >= '0') { $bbcolor6='color:rgba(200,255,200,1)'; } else { $bbcolor6='color:#e57875'; }
+	if($bbn_bonus_4_v >= '0') { $bbcolor7='color:rgba(200,255,200,1)'; } else { $bbcolor7='color:#e57875'; }
+	if($bbn_bonus_5_v >= '0') { $bbcolor8='color:rgba(200,255,200,1)'; } else { $bbcolor8='color:#e57875'; }
+	if($bbn_bonus_6_v >= '0') { $bbcolor9='color:rgba(200,255,200,1)'; } else { $bbcolor9='color:#e57875'; }
+	if($bbn_bonus_7_v >= '0') { $bbcolor10='color:rgba(200,255,200,1)'; } else { $bbcolor10='color:#e57875'; }
 
 ?>

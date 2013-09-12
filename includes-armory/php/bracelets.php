@@ -31,7 +31,7 @@ $sql1 = mysql_query($requette1) or die(mysql_error());
 while(($data1 = mysql_fetch_array($sql1))) {
 
 
-    $name_bracelet = $data1['locale_name'];
+    $name_bracelet = htmlentities($data1['locale_name']);
     $bralvl = $data1['limitvalue0'];
 
 
@@ -115,4 +115,15 @@ if ($bran_bonus_7 >= '7' && $bran_bonus_7 <= '47') {
     $bran_bonus_6 = $itembonus[$bran_bonus_6];
     $bran_bonus_7 = $itembonus[$bran_bonus_7];
 
+	if($brabonus_1_v >= '0') { $bracolor='color:rgba(200,255,200,1)'; } else { $bracolor='color:#e57875'; }
+	if($brabonus_2_v >= '0') { $bracolor2='color:rgba(200,255,200,1)'; } else { $bracolor2='color:#e57875'; }
+	if($brabonus_3_v >= '0') { $bracolor3='color:rgba(200,255,200,1)'; } else { $bracolor3='color:#e57875'; }
+	
+	if($bran_bonus_1_v >= '0') { $bracolor4='color:rgba(200,255,200,1)'; } else { $bracolor4='color:#e57875'; }
+	if($bran_bonus_2_v >= '0') { $bracolor5='color:rgba(200,255,200,1)'; } else { $bracolor5='color:#e57875'; }
+	if($bran_bonus_3_v >= '0') { $bracolor6='color:rgba(200,255,200,1)'; } else { $bracolor6='color:#e57875'; }
+	if($bran_bonus_4_v >= '0') { $bracolor7='color:rgba(200,255,200,1)'; } else { $bracolor7='color:#e57875'; }
+	if($bran_bonus_5_v >= '0') { $bracolor8='color:rgba(200,255,200,1)'; } else { $bracolor8='color:#e57875'; }
+	if($bran_bonus_6_v >= '0') { $bracolor9='color:rgba(200,255,200,1)'; } else { $bracolor9='color:#e57875'; }
+	if($bran_bonus_7_v >= '0') { $bracolor10='color:rgba(200,255,200,1)'; } else { $bracolor10='color:#e57875'; }
 ?>
